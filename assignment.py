@@ -10,14 +10,15 @@ while True:
     if location != None:
         golden = p.locateOnScreen('assets/golden.png', confidence = 0.9)
         upgrade = p.locateOnScreen('assets/upgrade.png', confidence = 0.8)
+        
+        #autoclicker
+        p.moveTo(location) 
+        p.tripleClick()
 
         if a:
             p.moveTo(1152,188)
             p.click
 
-        if golden == None:
-            p.moveTo(location) 
-            p.tripleClick()
 
 
         elif golden != None:
@@ -25,7 +26,7 @@ while True:
             p.click
             time.sleep(2)
         
-        elif golden 
+        elif upgrade != 
     
     
 print("done")
