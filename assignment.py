@@ -1,32 +1,47 @@
 import pyautogui as p
 import time
+import upgrades
 
-
+#waits 2 seconds
 time.sleep(2)
+
+#finds cookie and the store
 location = p.locateOnScreen('assets/cookie.png')
+store = p.locateOnScreen('assets/store.png')
 
 
-while True:
+#Gives the program a lifetime of 10 seconds
+start = time.time()
+end = (start + 15)
+
+#loop
+while end > start:
+    start = time.time()
+
+    #if cookie is found start program
     if location != None:
-        golden = p.locateOnScreen('assets/golden.png', confidence = 0.9)
-        upgrade = p.locateOnScreen('assets/upgrade.png', confidence = 0.8)
+        golden = p.locateOnScreen('assets/golden.png', confidence = 0.8)
+        upgrade = p.locateOnScreen('assets/upgrade.png', confidence = 0.5)
         
-        #autoclicker
-        p.moveTo(location) 
-        p.tripleClick()
+        for i in range (0,100):
+            #autoclicker
+            p.moveTo(location) 
+            p.tripleClick()
 
-        if a:
-            p.moveTo(1152,188)
-            p.click
-
-
-
-        elif golden != None:
-            p.moveTo(golden)
-            p.click
-            time.sleep(2)
+            #golden cookie finder
+            if golden != None:
+                p.moveTo(golden)
+                p.leftClick
+                print("found a golden cookie")
         
-        elif upgrade != 
+        #store perks
+        upgrades.perks()
+        upgrades.upgrades()
+
+    elif location == None:
+        break
+
+        
     
     
 print("done")
