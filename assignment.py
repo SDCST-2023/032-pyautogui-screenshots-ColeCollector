@@ -28,20 +28,23 @@ while end > start:
         for i in range (0,150):
             #autoclicker
             p.click()
+            p.click()
+            p.click()
+            #golden cookie checker
             golden.golden()
 
         
         #using the store
-        #66% of the time it buys upgrades
-        #33% of the time it buys perks
         randomchoice = random.randint(1,3)
         
+        #33% of the time it buys perks
         if randomchoice == 1:
             upgrades.perks()
-
+        #66% of the time it buys upgrades
         else:
             upgrades.upgrades()
 
+    #if cookie isn't found stop program
     elif location == None:
         break
     
