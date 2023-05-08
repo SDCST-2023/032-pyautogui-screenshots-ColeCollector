@@ -13,9 +13,9 @@ location = p.locateOnScreen('assets/cookie.png')
 store = p.locateOnScreen('assets/store.png')
 
 
-#Makes the program stop looping if its been more than 20 seconds
+#Makes the program stop looping if its been more than 30 seconds
 start = time.time()
-end = (start + 20)
+end = (start + 30)
 
 #loop
 while end > start:
@@ -23,11 +23,11 @@ while end > start:
 
     #if cookie is found start program
     if location != None:
-        
-        for i in range (0,50):
+        p.moveTo(location) 
+
+        for i in range (0,150):
             #autoclicker
-            p.moveTo(location) 
-            p.tripleClick()
+            p.click()
             golden.golden()
 
         
