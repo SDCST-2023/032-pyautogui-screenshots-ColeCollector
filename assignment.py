@@ -12,9 +12,9 @@ location = p.locateOnScreen('assets/cookie.png')
 store = p.locateOnScreen('assets/store.png')
 
 
-#Makes the program stop looping if its been more than 30 seconds
+#Makes the program stop looping if its been more than 20 seconds
 start = time.time()
-end = (start + 30)
+end = (start + 20)
 
 #loop
 while end > start:
@@ -22,22 +22,32 @@ while end > start:
 
     #if cookie is found start program
     if location != None:
-        golden = p.locateOnScreen('assets/golden1.png', confidence = 0.7)
-        upgrade = p.locateOnScreen('assets/upgrade.png', confidence = 0.5)
+        golden1 = p.locateOnScreen('assets/golden1.png', confidence = 0.4)
+        golden2 = p.locateOnScreen('assets/golden2.png', confidence = 0.4)
         
-        for i in range (0,200):
+        for i in range (0,300):
             #autoclicker
             p.moveTo(location) 
             p.tripleClick()
 
             #golden cookie finder
-            if golden != None:
-                p.moveTo(golden)
-                p.click
+            if golden1 != None:
+                p.moveTo(golden1)
+                p.click()
                 time.sleep(0.5)
+                print("golden cookie1 found")
+
+            if golden2 != None:
+                p.moveTo(golden2)
+                p.click()
+                time.sleep(0.5)
+                print("golden cookie2 found")
+
         
         #using the store
-        randomchoice = random.randint(1,2)
+        #66% of the time it buys upgrades
+        #33% of the time it buys perks
+        randomchoice = random.randint(1,3)
         
         if randomchoice == 1:
             upgrades.perks()

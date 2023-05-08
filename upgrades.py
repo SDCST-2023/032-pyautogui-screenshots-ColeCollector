@@ -38,8 +38,3 @@ def upgrades():
                 p.click()
                 maximum = maximum + 1
                 time.sleep(0.5)
-
-
-
-
-upgrades()
