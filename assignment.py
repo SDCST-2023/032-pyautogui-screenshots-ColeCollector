@@ -24,7 +24,7 @@ while end > start:
     #if cookie is found start program
     if location != None:
         
-        for i in range (0,300):
+        for i in range (0,50):
             #autoclicker
             p.moveTo(location) 
             p.tripleClick()
