@@ -4,6 +4,7 @@ import random
 import sys
 import upgrades
 import golden
+import clicker
 
 #waits 2 seconds
 time.sleep(2)
@@ -25,13 +26,14 @@ while end > start:
     if location != None:
         p.moveTo(location) 
 
-        for i in range (0,150):
+        for i in range (0,50):
             #autoclicker
-            p.click()
-            p.click()
-            p.click()
+            p.moveTo(location) 
+            clicker.autoclicker()
+
             #golden cookie checker
             golden.golden()
+            
 
         
         #using the store
