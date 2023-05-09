@@ -2,7 +2,7 @@ import pyautogui as p
 import time
 
 def autoclicker():
-    #clicks 15 times
+    #clicks 10 times
     p.click()
     time.sleep(0.01)
     p.click()
@@ -22,15 +22,6 @@ def autoclicker():
     p.click()
     time.sleep(0.01)
     p.click()
-    time.sleep(0.01)
-    p.click()
-    time.sleep(0.01)
-    p.click()
-    time.sleep(0.01)
-    p.click()
-    time.sleep(0.01)
-    p.click()
-    time.sleep(0.01)
-    p.click()
+    
     
     
