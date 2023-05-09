@@ -1,6 +1,5 @@
 import pyautogui as p
 import time
-time.sleep(2)
 
 def perks():
     p.moveTo(1275,500)

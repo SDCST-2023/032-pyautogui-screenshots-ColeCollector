@@ -26,7 +26,7 @@ while end > start:
     if location != None:
         p.moveTo(location) 
 
-        for i in range (0,50):
+        for i in range (0,10):
             #autoclicker
             p.moveTo(location) 
             clicker.autoclicker()
