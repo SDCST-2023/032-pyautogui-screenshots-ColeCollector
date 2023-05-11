@@ -35,7 +35,7 @@ while end > start:
 
         
         #using the store
-        randomchoice = random.randint(1,3)
+        randomchoice = random.randint(1,2)
         
         #33% of the time it buys perks
         if randomchoice == 1:
