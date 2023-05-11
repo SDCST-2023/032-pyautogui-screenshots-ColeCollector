@@ -7,16 +7,16 @@ import golden
 import clicker
 
 #waits 2 seconds
-time.sleep(2)
+time.sleep(3)
 
 #finds cookie and the store
 location = p.locateOnScreen('assets/cookie.png')
 store = p.locateOnScreen('assets/store.png')
 
 
-#Makes the program stop looping if its been more than 30 seconds
+#Makes the program stop looping if its been more than 60 seconds
 start = time.time()
-end = (start + 30)
+end = (start + 60)
 
 #loop
 while end > start:
@@ -24,8 +24,6 @@ while end > start:
 
     #if cookie is found start program
     if location != None:
-        p.moveTo(location) 
-
         for i in range (0,20):
             #autoclicker
             p.moveTo(location) 
@@ -48,6 +46,7 @@ while end > start:
 
     #if cookie isn't found stop program
     elif location == None:
+        print("Cookie not found")
         break
     
     
