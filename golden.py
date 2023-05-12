@@ -3,8 +3,8 @@ import time
 
 
 def golden():
-    golden1 = p.locateOnScreen('assets/golden1.png', confidence = 0.3)
-    golden = p.locateOnScreen('assets/golden.png', confidence = 0.3)
+    golden1 = p.locateOnScreen('assets/golden1.png', confidence = 0.4)
+    golden = p.locateOnScreen('assets/golden.png', confidence = 0.4)
     
     if golden1 != None:
         p.moveTo(golden1)
