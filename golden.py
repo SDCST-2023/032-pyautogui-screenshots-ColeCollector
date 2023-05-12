@@ -3,8 +3,8 @@ import time
 
 
 def golden():
-    golden1 = p.locateOnScreen('assets/golden1.png', confidence = 0.4)
-    golden2 = p.locateOnScreen('assets/golden2.png', confidence = 0.4)
+    golden1 = p.locateOnScreen('assets/golden1.png', confidence = 0.3)
+    golden = p.locateOnScreen('assets/golden.png', confidence = 0.3)
     
     if golden1 != None:
         p.moveTo(golden1)
@@ -12,7 +12,7 @@ def golden():
         print('golden cookie1')
 
 
-    elif golden2 != None:
-        p.moveTo(golden2)
+    elif golden != None:
+        p.moveTo(golden)
         p.click()
-        print('golden cookie2')
+        print('golden cookie')

@@ -22,7 +22,7 @@ def upgrades():
     time.sleep(0.5)
     p.moveTo(1275,50)
 
-    upgradeList = ['wizard','temple','bank','factory','mine','farm','grandma','cursor']
+    upgradeList = ['shipment','wizard','temple','bank','factory','mine','farm','grandma','cursor']
     
     for i in upgradeList:
         buy = p.locateCenterOnScreen(f"assets/{i}.png")
